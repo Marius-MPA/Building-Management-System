@@ -1,0 +1,6 @@
+@import "../styles/styles.css";
+
+.test-color {
+    background-color: var(--mainYellow);
+    color: var(--mainOrange);
+}
