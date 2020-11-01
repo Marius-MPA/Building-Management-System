@@ -1,0 +1,5 @@
+<div *ngIf="control.touched">
+    <div class="error" *ngIf="control.errors">
+        {{ buildError(control.errors) }}
+    </div>
+</div>

@@ -1,6 +1,59 @@
 @import "../styles/styles.css";
 
-.test-color {
-    background-color: var(--mainYellow);
-    color: var(--mainOrange);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body {
+    color: var(--mainBlack);
+    background: var(--mainWhite);
+    font-family: var(--font-primary);
+} */
+/* --- header ---*/
+header {
+    width: 100%;
+    overflow: hidden;
+    min-width: var(--header-min-width);
+}
+#main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0.8rem 0.4rem 0.8rem;
+    max-width: var(--header-max-width);
+    margin: 0 auto;
+    background: var(--first-blue-color-lighter);
+}
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+.header-logo-text > p {
+    font-family: var(--font-third);
+    font-size: 80%;
+    font-weight: bold;
+    color:var(--dark-green-color);
+}
+.header-logo img {
+    width: 4rem;
+    height: auto;
+}
+.header-content {
+    display: flex;
+    color: var(--dark-green-color);
+}
+.header-content span{
+    padding: 0.5rem 0.8rem;
+    font-size: 150%;
+}
+.emergency-header {
+    text-align: center;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    background: var(--first-blue-color);
+    padding: 0.5rem 0;
+    max-width: var(--header-max-width);
+    margin: 0 auto;
 }

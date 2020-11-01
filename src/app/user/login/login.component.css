@@ -1,0 +1,194 @@
+@import "../../../styles/styles.css";
+
+.container {
+    position: relative;
+    background: url('../../../assets/images/bcg-container.jpg');
+    background-color: #1dda8b; /* Used if the image is unavailable */
+    max-width: var(--header-max-width);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;  /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    /* height: calc(100vh - 125px); */
+    min-height: 630px;
+    margin: 0 auto; 
+}
+.container:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(232, 224, 235, 0.9);
+    z-index: 3;
+}
+.form-container {
+    position: relative;
+    top: 2.5rem;
+    background: url('../../../assets/images/login-form-bcg.jpg');
+    background-color: #1dda8b; /* Used if the image is unavailable */
+    max-width: 350px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;  /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    height: 480px;
+    margin: 0 auto;
+    z-index: 5;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px 3px #888888;
+    padding: var(--extra-space-4);
+}
+.form-container:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(83, 81, 85, 0.6);
+    z-index: 6;
+    border-radius: 1rem;
+}
+header {
+    position: relative;
+    z-index: 7;
+}
+.login-icon {
+    background-color: var(--first-blue-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto;   
+}
+.login-icon .cube {
+    position: absolute;
+    transform: translate(11px, 8px);
+    color: var(--mainWhite);
+}
+.login-text {
+    margin-top: var(--extra-space-3);
+    text-align: center;
+    font-weight: var(--font-bold);
+    /* color: var(--first-blue-color); */
+    color: var(--mainWhite);
+}
+/* --- FORM --- */
+form,
+footer {
+    position: relative;
+    z-index: 7;
+}
+.form-body {
+    margin-top: 2rem; 
+}
+::placeholder {
+    color: var(--first-blue-color);
+}
+
+input[type=text]{
+    width: 100%;
+    border: 2px solid var(--first-blue-color);
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+    background: transparent;
+    color: var(--first-greenyellow-color);
+}
+input[type=text]:focus {
+    border-color: var(--first-greenyellow-color);
+    box-shadow: 0 0 8px 0 var(--first-greenyellow-color);
+    background: var(--darkGrey);
+}
+.inputContainer input {
+    padding-left: 40px; 
+}
+.inputContainer {
+    position: relative;
+    height: 70px;   
+}
+.inputContainer .labelIcon {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    padding: 8px 10px;
+    color: var(--first-blue-color);
+    transition: .3s;
+}
+.inputContainer input[type=text]:focus + .labelIcon {
+    color: var(--first-greenyellow-color);
+}
+
+/* .inputContainer input[type=text]:focus */
+.rememberMe {
+    margin-top: var(--extra-space-1);
+}
+
+.rememberMe input[type=checkbox]{
+    margin-right: var(--extra-space-1);
+}
+.rememberMe label {
+    color: var(--mainWhite);
+}
+.loginBtn{
+    background-color: var(--first-blue-color);
+    color: white;
+    padding: 0.7rem;
+    display: block;
+    width: 100%;
+    margin: var(--extra-space-3) 0;
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h3-font-size);
+    outline: none;
+}
+.loginBtn:hover {
+    background-color: var(--first-greenyellow-color);
+    color: var(--first-blue-color-darker);
+    box-shadow: 0 0 8px 0 var(--first-greenyellow-color);
+}
+.forgotPassword,
+.registerBtn {
+    color: var(--first-blue-color);
+    font-weight: var(--font-bold);
+    font-size: var(--normal-font-size);
+}
+.forgotPassword:hover,
+.registerBtn:hover {
+    color: var(--first-greenyellow-color);
+}
+.registeHere{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--extra-space-1);
+}
+.registerBtn{
+    margin-right: var(--extra-space-2);
+}
+.registerText {
+    color: var(--mainWhite);
+}
+.designedByRow{
+    position: absolute;
+    bottom: 0.5rem;
+    left: calc(50% - 80px);
+    z-index: 4;
+}
+
+input.ng-touched.ng-invalid,
+select.ng-touched.ng-invalid {
+    border: 2px solid var(--red-color);
+    box-shadow: 0 0 8px 0 var(--red-color);
+    border-radius: 4px;
+    /* color: var(--red-color); */
+}
+
+input.ng-touched.ng-valid,
+select.ng-touched.ng-valid {
+    border: 2px solid var(--first-greenyellow-color);
+    box-shadow: 0 0 8px 0 var(--first-greenyellow-color);
+    border-radius: 4px;
+}

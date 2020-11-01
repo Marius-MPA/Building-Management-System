@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './_shared/services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Building-Management-System';
+
+  constructor(private userService : UserService) { }
+
+  logout(){
+    this.userService.logOut();
+    console.log('hello');
+    
+  }
 }

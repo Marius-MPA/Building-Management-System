@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
+<div class="container">
+    <div class="form-container">
+        <header>
+            <div class="login-icon"><i class="fas fa-cubes fa-3x cube"></i></div>
+            <h2 class="login-text">Log In</h2>
+        </header>
+        <form class="form-body" [formGroup]="userProfileForm" (ngSubmit)="onSubmit()"> 
+
+            <div class="inputContainer">
+                <label for="userEmail">
+                    <input required id="userEmail" type="text" formControlName="userEmail"
+                        placeholder="E-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'">
+                    <i class="fas fa-envelope labelIcon"></i>
+                </label>
+                <app-error [control]="userProfileForm.get('userEmail')"></app-error>
+            </div>
+            
+            <div class="inputContainer">
+                <label for="userPassword">
+                    <input  required id="userPassword" type="text" formControlName="userPassword" 
+                        placeholder="Password"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                    <i class="fas fa-lock labelIcon"></i>
+                </label>
+                <app-error [control]="userProfileForm.get('userPassword')"></app-error>
+            </div>
+                      
+            <div class="rememberMe">
+                <input id="rememberMeCheckbox" type="checkbox" formControlName="rememberMe"> 
+                <label for="rememberMeCheckbox">Remember Me</label>
+            </div>
+            <button type="button" class="button loginBtn" [disabled]="!userProfileForm.valid" routerLink="/dashboardComponent" (click)="login()">Log In</button>
+            <a href="#" routerLink="/test" class="forgotPassword">Forgot Password ?</a>
+        </form>
+        <footer>
+            <div class="registeHere">
+                <p class="registerText">Don't have an account ?</p>
+                <a class="button registerBtn" routerLink="/registerComponent">Register Here</a>
+            </div>
+        </footer>
+    </div>
+    
+    <div class="designedByRow"> Designed by &nbsp;<i class="fas fa-book-reader"></i> &nbsp;MPA</div>
+</div>

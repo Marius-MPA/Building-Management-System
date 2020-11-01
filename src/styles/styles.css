@@ -1,6 +1,89 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+/* Colors */
+:root {
+    --first-blue-color: #5097e9;
+    --first-blue-color-lighter: #cbdef3;
+    --first-blue-color-dark: #366caa;
+    --first-blue-color-darker:  #103052;
+    --text-color: #aa279f;
+    --first-color-light: #EAE7E6;
+    /* --first-color-lighter: #FFFAFA; */
+    --mainWhite: #fff;
+    --red-color: red;
+    --second-color-Grey: #ececec;
+    --dark-green-color: rgb(43, 124, 47);
+    --header-max-width: 1024px;
+    --header-min-width: 500px;
+    --test-color: green;
+    --first-greenyellow-color: greenyellow;
+
+    /* Margins */
+    --extra-space-1: .5rem;
+    --extra-space-2: 1rem;
+    --extra-space-3: 1.5rem;
+    --extra-space-4: 2rem;
+    --extra-space-5: 2.5rem;
+
+     /* Font Weight */
+     --font-medium: 500;
+     --font-semi-bold: 600;
+     --font-bold: 800;
+
+     /* Font and typography */
+    --body-font: "Poppins", sans-serif;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+}
+
+
+/* Properties  */
+:root {
+    --primaryTransition: all 0.3s linear;
+    --secondaryTransition: all 0.4s ease-in-out;
+}
+
 :root {
     --mainOrange: #f09d51;
     --mainYellow: #ecf017;
     --mainWhite: #fff;
     --mainBlack: #222;
+    --mainGrey: #ececec;
+    --darkGrey: #9c9595;
+    --bluePurple: #8073fa;
+    --bluePurple-light: #cac5f7;
+    --bluePurple-lighter: #e4e3f1;
 }
+
+.button {
+    cursor: pointer;
+    border:none;
+    text-align: center;
+    border-radius: 4px;
+}
+a {
+    text-decoration: none;
+    
+}
+
+
+@media screen and (min-width: 768px) {
+    :root {
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;  
+    }
+
+}
+
