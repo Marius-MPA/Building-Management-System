@@ -1,7 +1,7 @@
 .container {
     position: relative;
-    background: url('../../../assets/images/bcg-container.jpg');
-    background-color: #1dda8b; /* Used if the image is unavailable */
+    background: url('../../../assets/images/bcg-container1.jpg');
+    background-color: #c6dadf; /* Used if the image is unavailable */
     max-width: var(--header-max-width);
     background-position: center; /* Center the image */
     background-repeat: no-repeat;  /* Do not repeat the image */
@@ -24,7 +24,7 @@
     position: relative;
     top: 2.5rem;
     background: url('../../../assets/images/register-form-bcg1.jpg');
-    background-color: #1dda8b; /* Used if the image is unavailable */
+    background-color: #c6dadf; /* Used if the image is unavailable */
     max-width: 350px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat;  /* Do not repeat the image */

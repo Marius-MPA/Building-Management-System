@@ -1,21 +1,15 @@
 @import "../styles/styles.css";
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* body {
-    color: var(--mainBlack);
-    background: var(--mainWhite);
-    font-family: var(--font-primary);
-} */
+
 /* --- header ---*/
 header {
     width: 100%;
     overflow: hidden;
-    min-width: var(--header-min-width);
 }
 #main-header {
     display: flex;
@@ -57,3 +51,5 @@ header {
     max-width: var(--header-max-width);
     margin: 0 auto;
 }
+
+

@@ -2,8 +2,8 @@
 
 .container {
     position: relative;
-    background: url('../../../assets/images/bcg-container.jpg');
-    background-color: #1dda8b; /* Used if the image is unavailable */
+    background: url('../../../assets/images/bcg-container1.jpg');
+    background-color: #c6dadf; /* Used if the image is unavailable */
     max-width: var(--header-max-width);
     background-position: center; /* Center the image */
     background-repeat: no-repeat;  /* Do not repeat the image */
@@ -25,8 +25,8 @@
 .form-container {
     position: relative;
     top: 2.5rem;
-    background: url('../../../assets/images/login-form-bcg.jpg');
-    background-color: #1dda8b; /* Used if the image is unavailable */
+    background: url('../../../assets/images/login-form-bcg1.jpg');
+    background-color:#596c70; /* Used if the image is unavailable */
     max-width: 350px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat;  /* Do not repeat the image */
@@ -120,8 +120,6 @@ input[type=text]:focus {
 .inputContainer input[type=text]:focus + .labelIcon {
     color: var(--first-greenyellow-color);
 }
-
-/* .inputContainer input[type=text]:focus */
 .rememberMe {
     margin-top: var(--extra-space-1);
 }
@@ -183,7 +181,6 @@ select.ng-touched.ng-invalid {
     border: 2px solid var(--red-color);
     box-shadow: 0 0 8px 0 var(--red-color);
     border-radius: 4px;
-    /* color: var(--red-color); */
 }
 
 input.ng-touched.ng-valid,
