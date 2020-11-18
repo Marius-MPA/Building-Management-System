@@ -8,7 +8,7 @@
 :root {
     --first-blue-color: #5097e9;
     --first-blue-color-lighter: #cbdef3;
-    --first-blue-color-dark: #366caa;
+    --first-blue-color-dark: #65a5ca;
     --first-blue-color-darker:  #103052;
     --text-color: #aa279f;
     --first-color-light: #EAE7E6;
@@ -17,8 +17,6 @@
     --red-color: red;
     --second-color-Grey: #ececec;
     --dark-green-color: rgb(43, 124, 47);
-    --header-max-width: 1024px;
-    --header-min-width: 500px;
     --test-color: green;
     --first-greenyellow-color: greenyellow;
 
@@ -42,6 +40,9 @@
     --normal-font-size: 0.938rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
+
+    --container-max-width: 100%;
+    --header-min-width: 500px;
 }
 
 

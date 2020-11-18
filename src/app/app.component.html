@@ -12,26 +12,23 @@
       </div> 
     </div>
     <div class="header-content">
-      <div class="header-login ">
-        <span routerLink="/registerComponent"><i class="fas fa-user"></i></span>
+      <div class="header-login">
+        <span routerLink="/loginComponent"><i class="fas fa-user"></i></span>
       </div>
-      <div class="header-search"> 
-        <span><i class="fas fa-search"></i></span>
-      </div>
-      <div class="header-nav" (click)="logout()" routerLink="/loginComponent">
-        <span><i class="fas fa-sign-out-alt"></i></span>
+      <div class="header-date"> 
+        <span><i class="far fa-calendar-alt"></i></span>
+        <app-current-date></app-current-date>
       </div>
     </div>
   </div>
-  <div class="emergency-header">
-    <span>24/7 Emergency: (613) 762-5704</span>
-  </div>
-  
+  <!-- <div class="emergency-header">
+    <span>24/7 Emergency: (613) 762-5704</span> 
+  </div> -->
 </header>
 <router-outlet></router-outlet>
 
-<!-- <app-login></app-login> -->
 
   
+
 
 

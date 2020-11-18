@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/_shared/services/user.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-dashboard-main',
+  templateUrl: './dashboard-main.component.html',
+  styleUrls: ['./dashboard-main.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardMainComponent implements OnInit {
 
   public isMenuVisible = false;
 
@@ -23,4 +23,5 @@ export class DashboardComponent implements OnInit {
     this.userService.logOut();
     console.log('hello');
   }
+
 }

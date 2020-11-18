@@ -1,0 +1,14 @@
+<div class="container" >
+    <p *ngIf="weather.length == 0">Searching...</p>
+    <div class="daysWrapper" *ngIf="weather.length > 0">
+        
+        <div class="day" *ngFor="let forecast of weather">
+            <img [src]="forecast.iconLink" />
+            <p>{{ forecast.highTemperature }}C / {{ forecast.highTemperature | fahrenheit }}F</p>
+            <p>{{ forecast.utcTime | moment }}</p>
+        </div>
+             
+    </div>
+    <a (click)="goBack()" ><i class="far fa-times-circle fa-2x"></i></a>
+</div>
+

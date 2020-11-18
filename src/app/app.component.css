@@ -8,15 +8,18 @@
 
 /* --- header ---*/
 header {
+    position: fixed;
+    top: 0;
     width: 100%;
     overflow: hidden;
+    z-index: 9;
 }
 #main-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.8rem 0.8rem 0.4rem 0.8rem;
-    max-width: var(--header-max-width);
+    max-width: var(--container-max-width);
     margin: 0 auto;
     background: var(--first-blue-color-lighter);
 }
@@ -36,20 +39,66 @@ header {
 }
 .header-content {
     display: flex;
+    align-items: center;
     color: var(--dark-green-color);
 }
 .header-content span{
-    padding: 0.5rem 0.8rem;
+    padding: 0.3rem 0.5rem;
     font-size: 150%;
+}
+.header-login {
+    padding: 0 0.8rem;
+}
+.header-login span {
+    cursor: pointer;
+}
+.header-date {
+    display: flex;
+    align-items: center;
+    background-color: var(--mainWhite);
+    padding-right: 0.5rem;
+    border-radius: 4px;
+    margin-right: 0.6rem;
 }
 .emergency-header {
     text-align: center;
-    color: var(--white-color);
+    color: var(--mainWhite);
     font-size: 1.2rem;
     background: var(--first-blue-color);
     padding: 0.5rem 0;
-    max-width: var(--header-max-width);
+    max-width: var(--container-max-width);
     margin: 0 auto;
 }
 
-
+@media only screen and (max-width: 426px){
+    #main-header {
+        padding: 0.2rem 0.6rem 0.1rem 0.6rem;
+    }
+    .header-content span{
+        padding: 0.2rem 0.2rem;
+        font-size: 120%;
+    }
+    .header-date {
+        padding-right: 0.2rem;
+    }
+    .header-login {
+        padding-right: 0.4rem;
+    }
+    .header-login span {
+        font-size: 150%!important;
+    }
+    .emergency-header {
+        font-size: 85%;
+        padding: 0.3rem 0;
+    }
+    .header-logo img,
+    .header-logo-text{
+        font-size: 80%;
+    }
+    .header-content span{
+        font-size: 100%;
+    }
+    .header-date span {
+        display: none;
+    }
+}

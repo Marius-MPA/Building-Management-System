@@ -1,0 +1,90 @@
+<div class="container">
+    <header>
+        <div class="header-nav" (click)="toggleMenu()">
+            <span ><i class="fas fa-bars"></i></span>
+            <span><b>Menu</b></span>
+        </div>
+        <div class="header-nav test-flipboard" routerLink="/dashboardMainComponent">
+            <!-- <span><i class="fab fa-flipboard"></i></span> -->
+            <span><b>Menu</b></span>
+        </div>
+        <div class="emergency-header">
+          <span>24/7 Emergency: (613) 762-5704</span> 
+        </div>
+        <div class="header-nav" (click)="logout()" routerLink="/loginComponent">
+            <span><i class="fas fa-sign-out-alt"></i></span>
+            <span><b>LogOut</b></span>
+        </div>
+        <div class="sidebar" [ngClass]="{closed: !isMenuVisible }">
+         
+          <div class="close-sidebar">                
+              <img (click)="toggleMenu()" src="../assets/images/close-btn.png" width="30px" height="auto">
+          </div>
+          <ul class="sidebar-list">
+            <li (click)="toggleMenu()" routerLink="/dashboardMainComponent" class="sidebar-item">
+                <i class="fas fa-columns left-alignement"></i>
+                <p>Dashboard</p>
+            </li>
+            <li (click)="toggleMenu()" routerLink="/dashboardMainComponent/invoices" class="sidebar-item">
+                <i class="fas fa-wrench left-alignement"></i>
+                <p>Invoices</p>
+            </li>
+            <li class="sidebar-item"><i class="fas fa-history left-alignement"></i><p>work orders sent</p></li>
+            <li class="sidebar-item"><i class="far fa-calendar-alt left-alignement"></i><p>calendar</p></li>
+            <li class="sidebar-item"><i class="fas fa-list left-alignement"></i><p>maintenance schedule</p></li>
+            <li class="sidebar-item"><i class="far fa-building left-alignement"></i><p>building</p></li>
+            <li class="sidebar-item"><i class="fas fa-user left-alignement"></i><p>residents</p></li>
+            <li class="sidebar-item"><i class="fas fa-key left-alignement"></i><p>keys</p></li>
+            <li class="sidebar-item"><i class="fas fa-cube left-alignement"></i><p>parcels</p></li>
+            <li class="sidebar-item"><i class="fas fa-globe-europe left-alignement"></i><p>contractors</p></li>
+            <li class="sidebar-item"><i class="fas fa-cloud left-alignement"></i><p>cloudsense</p></li>
+          </ul>
+        </div>
+    </header>
+    <div class="wrapper">
+      <div class="sidebar-2">
+        <!-- condo-info card -->
+        <div class="condo-info">
+          <article class="condo-card">
+            <div class="img-main-building"></div>
+            <div class="condo-content">
+              <div class="condo-name">
+                <h4>Ferview Condominium</h4>
+              </div>
+              <hr>
+              <div class="condo-address">
+                <small><p>70 Clipper Road, Toronto, CA</p></small>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- end-of condo-info card -->
+        <ul class="sidebar-list">
+          <li routerLink="/dashboardMainComponent" class="sidebar-item">
+              <i class="fas fa-columns left-alignement"></i>
+              <p>Dashboard</p>
+          </li>
+          <li routerLink="/dashboardMainComponent/invoices" class="sidebar-item">
+              <i class="fas fa-wrench left-alignement"></i>
+              <p>Invoices-1</p>
+          </li>
+          <li class="sidebar-item"><i class="fas fa-history left-alignement"></i><p>work orders sent</p></li>
+          <li class="sidebar-item"><i class="far fa-calendar-alt left-alignement"></i><p>calendar</p></li>
+          <li class="sidebar-item"><i class="fas fa-list left-alignement"></i><p>maintenance schedule</p></li>
+          <li class="sidebar-item"><i class="far fa-building left-alignement"></i><p>building</p></li>
+          <li class="sidebar-item"><i class="fas fa-user left-alignement"></i><p>residents</p></li>
+          <li class="sidebar-item"><i class="fas fa-key left-alignement"></i><p>keys</p></li>
+          <li class="sidebar-item"><i class="fas fa-cube left-alignement"></i><p>parcels</p></li>
+          <li class="sidebar-item"><i class="fas fa-globe-europe left-alignement"></i><p>contractors</p></li>
+          <!-- <li class="sidebar-item"><i class="fas fa-cloud left-alignement"></i><p>cloudsense</p></li> -->
+        </ul>
+        
+      </div>
+      <div class="main-display">
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+    
+</div>
+

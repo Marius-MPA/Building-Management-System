@@ -1,0 +1,27 @@
+.container {
+    background-color: #F0F0F0;
+    width: 100%;
+    /* padding: 20px; */
+    border: 1px solid #CCC;
+    margin: 0;
+    /* display: flex;
+    
+    justify-content: center; */
+}
+
+/* style="background-color: #F0F0F0; width: 75%; padding: 20px; border: 1px solid #CCC; margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)" */
+.daysWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.day {
+    background: chocolate;
+    min-width: 150px;
+    padding: 0.3rem;
+    border: 1px solid grey;
+    border-radius: 4px;
+    text-align: center;
+    margin: 0.3rem;
+}

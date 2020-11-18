@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.important-numbersCom {
+    /* position: relative; */
+    background: rgb(236, 107, 107);
+    padding: 1.3rem;
+    border-radius: .7rem;
+    height: 100%;
+    width: 100%;
+    color: var(--mainWhite);
+}
+
+.important-numbersCom :nth-child(2) {
+    margin-top: .7rem;
+}
+.important-numbersCom:hover {
+    background: rgb(233, 45, 45);
+    color: var(--mainBlack); 
+}

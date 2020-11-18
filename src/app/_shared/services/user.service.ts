@@ -6,7 +6,7 @@ import { StorageService } from './storage.service';
 })
 export class UserService {
 
-  private loggedIn = false; // aici pot pune TRUE si sar pese guard pana fac modificari
+  private loggedIn = true; // normal etse 'false' , dar aici pot pune TRUE si sar pese guard pana fac modificari
 
   set isLoggedIn(value: boolean){
     this.loggedIn = value;

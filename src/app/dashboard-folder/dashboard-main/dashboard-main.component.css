@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- header ---*/
+.container {
+    overflow: hidden;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    background-color: var(--mainWhite);
+}
+header {
+    position: fixed;
+    top: 73px;
+    /* background: var(--first-blue-color-lighter); */
+    background: rgb(74, 132, 240);
+    padding: 0.3rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+.header-nav {
+    /* display: flex; */
+    /* align-items: center; */
+    cursor: pointer;
+    margin-left: 0.5rem;
+    align-self: center!important;
+}
+
+.header-nav span + span {
+    padding: 0 0.4rem;
+    align-self: center;
+}
+.test-flipboard{
+    display: none;
+    margin-left: 5rem;
+    color: var(--first-blue-color-darker);
+}
+.emergency-header {
+    color: var(--mainWhite);
+    align-self: center;
+}
+.wrapper{
+    max-width: var(--container-max-width);
+    margin-top: 112px; 
+}
+
+/* sidebar */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 113px;
+    background: var(--mainWhite);
+    width: 260px;
+    height: 100%;
+    box-shadow: 1px 0 5px #c0c0c0;
+    transition: all ease 0.3s;
+    opacity: 0.9;
+}
+.sidebar.closed {
+ left: -100%; /* or left: -260px */
+}
+
+.close-sidebar {
+    margin-left: 13.7rem;
+    min-height: 1.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.4rem;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    padding-left: 0;
+}
+.sidebar-item {
+    display: flex;
+    padding: 0.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.sidebar-item:hover {
+    border-left: 3px solid var(--first-blue-color);
+    background: var(--first-blue-color-lighter);
+    opacity: 1;
+}
+.sidebar-item:hover .left-alignement {
+    color: var(--first-blue-color);
+}
+.sidebar-item:hover .sidebar-item > p {
+    color: var(--first-blue-color);
+}
+li .left-alignement {
+    margin-left: 1.3rem;
+}
+.sidebar-item > p {
+    margin-left: 1.3rem;
+}
+/* wrapper */
+
+/* sidebar-2 */
+.sidebar-2 {
+    display: inline-block;
+    width: 260px;
+    height: calc(100vh - 121px);
+    background:cornflowerblue;
+    position: fixed; 
+}
+/* condo-info */
+.condo-info{
+    padding-top: 1rem;
+    width: 70%;
+    margin: 0 auto;
+}
+.condo-card {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background: var(--mainWhite);
+    margin-bottom: 0.5rem!important;
+}
+.img-main-building {
+    background: url('../../../assets/images/main-building-small.jpg');
+    background-color: blueviolet;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 4px 4px 0 0;   
+}
+.condo-name {
+    text-align: center;
+    padding: 0.1rem;
+}
+.condo-address {
+    text-align: center;
+    padding: 0.1rem; 
+}
+/* end of condo-info */
+
+/* main-display */
+
+.main-display {
+    display: inline-block;
+    height: calc(100vh - 162px);
+    /* width: calc(100% - 260px);
+    margin-left: 260px; */
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 426px){
+    /* .wrapper{
+        margin-top: 136px;
+    } */
+    .header-nav span:nth-child(2){
+        display: none;
+        
+    }
+    .header-nav span:nth-child(1) {
+        margin-right: 0.5rem;
+        font-size: 130%;
+    }
+    .emergency-header{
+        font-size: 90%;
+    }
+    
+}
+@media only screen and (min-width: 426px){
+    header{
+        top: 87px;
+    }
+    .sidebar {
+        top: 122px;
+    }
+    .wrapper{
+        margin-top: 121px; 
+    }
+}
+@media only screen and (min-width: 769px){
+    
+    header .header-nav:first-child {
+        display: none;
+    }
+    .test-flipboard {
+        display: inline;
+    }
+    header .header-nav:nth-child(4){
+        
+        margin-right: 5rem;
+        color: var(--first-blue-color-darker);
+    }
+    header .header-nav:nth-child(4) span {
+        font-weight: bold;
+    }
+    .sidebar {
+        display: none;
+    }
+    .main-display{
+        width: calc(100% - 260px);
+        margin-left: 260px;
+    }
+    
+}
+@media only screen and (max-width: 769px){
+    .sidebar-2 {
+        display: none;
+    }
+}

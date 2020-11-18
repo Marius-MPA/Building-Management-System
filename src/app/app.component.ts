@@ -11,9 +11,9 @@ export class AppComponent {
 
   constructor(private userService : UserService) { }
 
-  logout(){
-    this.userService.logOut();
-    console.log('hello');
+  // logout(){ - le-am mutat la Dashboard !!!!!!!!!!!!!!!!!!!!!!!!!! - trebuie sters de aici
+  //   this.userService.logOut();
+  //   console.log('hello');
     
-  }
+  // }
 }

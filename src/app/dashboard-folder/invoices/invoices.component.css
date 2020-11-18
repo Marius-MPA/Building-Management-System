@@ -1,0 +1,10 @@
+@media only screen and (min-width: 769px){
+    p{
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* width: calc(100% - 260px); */
+        /* margin-left: 260px; */
+        background: chocolate;
+    }
+
+    
+}
