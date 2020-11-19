@@ -8,21 +8,48 @@
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
-    background-color: rgb(217, 247, 185);;
+    background-color: rgb(217, 247, 185);
     min-height: calc(100vh - 163px);
 }
 
  /* container */
  .grid-container{
-    padding: 1rem;
-    /* display: grid; */
-    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-    /* grid-gap: 2rem; */
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-items: center!important;
+    /* layout with grid */
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "elem-1"
+        "elem-2"
+        "elem-3"
+        "elem-4"
+        "elem-5"
+        "elem-6";
+    padding: 1rem 0;
+    /* layout with flex */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-items: center!important; */
+    /* padding: 1rem; */
+}
+.position-one{
+    grid-area: elem-1;
+}
+.position-two{
+    grid-area: elem-2;
+}
+.position-three{
+    grid-area: elem-3;
+}
+.position-four{
+    grid-area: elem-4;
+}
+.position-five{
+    grid-area: elem-5;
+}
+.position-six{
+    grid-area: elem-6;
 }
 
 /* items-requiring-action */
@@ -30,12 +57,10 @@
     background: rgba(72, 99, 255, 0.9);
     color: white;
     width: 300px;
-    /* margin: 0.5rem auto; */
-    margin: 0 auto 1rem auto;
+    margin: 0 auto;
     border-radius: 0.7rem;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
     padding: 1rem;
-    /* margin-top: 1rem!important; */
 }
 .item-list-reqAction {
     display: flex;
@@ -59,11 +84,10 @@
     background: var(--mainWhite);
     color: var(--mainBlack);
     width: 300px;
-    margin: 0 auto 1rem auto;
+    margin: 0 auto;
     border-radius: 0.7rem;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
     padding: 1rem;
-    /* margin-top: 1rem; */
 }
 .notes-header {
     display: flex;
@@ -94,11 +118,10 @@
     background: var(--bluePurple-light);
     width: 300px!important;
     height: auto;
-    margin: 0 auto 1rem auto;
+    margin: 0 auto;
     border-radius: 0.7rem;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
     padding: 1rem;
-    /* margin-top: 1rem;   */
 }
 .weather_numbers{
     display: flex;
@@ -134,31 +157,21 @@
     padding-top: 0.7rem;
 }
 
-@media only screen and (max-width: 426px){
-    header{
-        top: 98px;
-    }
-    .grid-container{
-        margin-top: 0.5rem;
-    }
-}
 @media only screen and (min-width: 426px){
-  
-    .sidebar {
-        top: 10.125rem;
-    }
     .grid-container{
-        margin-top: 0.5rem; 
-    }
-  
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "elem-1 elem-2"
+        "elem-3 elem-4"
+        "elem-5 elem-6";
+    } 
 }
-@media only screen and (max-width: 769px){
-    header {
-        display: none;
-    }
-}
-@media only screen and (min-width: 769px){
-    .condo-info {
-        display: none;
-    }  
+
+@media only screen and (min-width: 1025px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "elem-1 elem-2 elem-3"
+        "elem-4 elem-5 elem-6";
+    } 
 }

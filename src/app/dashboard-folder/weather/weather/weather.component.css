@@ -17,12 +17,21 @@
 .weather-container a p {
     display: inline;
     color: var(--mainOrange);
-    
+    animation: changeColor 3s infinite;
+}
+@keyframes changeColor {
+    0%, 100% {
+        color: var(--mainOrange);
+    }
+    50% {
+        color: var(--mainWhite);
+    }
 }
 .weather-container a p:hover {
-    background: var(--first-blue-color);
-    color: var(--mainBlack);
-    border-radius: 0.3rem;
+    background: var(--bluePurple-light);
+    color: rgba(72, 99, 255, 0.9)!important;
+    border-radius: 0.4rem;
+    padding: 0.2rem;
     font-weight: 700;
 }
 .weather-details {

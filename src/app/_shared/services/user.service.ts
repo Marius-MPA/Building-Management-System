@@ -6,7 +6,7 @@ import { StorageService } from './storage.service';
 })
 export class UserService {
 
-  private loggedIn = true; // normal etse 'false' , dar aici pot pune TRUE si sar pese guard pana fac modificari
+  private loggedIn = true; // normal este 'FALSE' , dar aici pun 'TRUE' si sar pese guard pana fac modificari
 
   set isLoggedIn(value: boolean){
     this.loggedIn = value;
@@ -19,8 +19,8 @@ export class UserService {
   constructor(private storage: StorageService) { }
 
   public logIn(loginData) {
-    this.isLoggedIn = false; // !!! incepem cu prezumtia ca nu este logat si apoi daca totul e ok devine TRUE
-    let user = this.storage.getUser(loginData.userEmail); // deci user va fi :key = q@ya.com si Value = toate valorile de la aceasta key
+    this.isLoggedIn = false; 
+    let user = this.storage.getUser(loginData.userEmail); 
     console.log(user);
     if(user !== null && loginData.userPassword === user.password) 
     {
