@@ -223,8 +223,13 @@ li .left-alignement {
     }
 }
 
-@media only screen and (min-width: 1025px){
+@media only screen and (min-width: 1026px){
     .main-display{
         height: calc(100vh - 121px);
     }
 }
+/* @media only screen and (min-width: 1441px){
+    .main-display{
+        height: calc(100vh - 10px);
+    }
+} */

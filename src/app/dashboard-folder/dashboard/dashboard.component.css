@@ -10,6 +10,7 @@
     margin: 0 auto;
     background-color: rgb(217, 247, 185);
     min-height: calc(100vh - 163px);
+    /* height: 100vh; */
 }
 
  /* container */

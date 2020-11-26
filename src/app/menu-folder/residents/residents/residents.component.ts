@@ -29,8 +29,8 @@ export class ResidentsComponent implements OnInit {
 
   getResident(){
     this.resident.getResidentList().subscribe((data) => {
-    // this.residentsList = data;
-    console.log(this.residentsList);
+    this.residentsList = data;
+    // console.log(this.residentsList);
     })
   }
 
