@@ -26,16 +26,24 @@ header {
     margin: 0 auto;
 }
 .header-nav {
-    /* display: flex; */
-    /* align-items: center; */
     cursor: pointer;
     margin-left: 0.5rem;
     align-self: center!important;
 }
-
+.header-nav:hover {
+    color: var(--first-blue-color-lighter)!important;
+}
 .header-nav span + span {
     padding: 0 0.4rem;
     align-self: center;
+}
+
+.header-nav span:nth-child(2){
+    display: none;  
+}
+.header-nav span:nth-child(1) {
+    margin-right: 0.5rem;
+    font-size: 130%;
 }
 .test-flipboard{
     display: none;
@@ -45,6 +53,7 @@ header {
 .emergency-header {
     color: var(--mainWhite);
     align-self: center;
+    font-size: 90%;
 }
 .wrapper{
     max-width: var(--container-max-width);
@@ -104,6 +113,7 @@ li .left-alignement {
 .sidebar-item > p {
     margin-left: 1.3rem;
 }
+
 /* wrapper */
 
 /* sidebar-2 */
@@ -153,31 +163,12 @@ li .left-alignement {
 
 .main-display {
     display: inline-block;
-    height: calc(100vh - 162px);
-    /* width: calc(100% - 260px);
-    margin-left: 260px; */
+    height: calc(100vh - 112px);
     width: 100%;
 }
 
-
-@media only screen and (max-width: 426px){
-    /* .wrapper{
-        margin-top: 136px;
-    } */
-    .header-nav span:nth-child(2){
-        display: none;
-        
-    }
-    .header-nav span:nth-child(1) {
-        margin-right: 0.5rem;
-        font-size: 130%;
-    }
-    .emergency-header{
-        font-size: 90%;
-    }
-    
-}
 @media only screen and (min-width: 426px){
+     
     header{
         top: 87px;
     }
@@ -186,6 +177,19 @@ li .left-alignement {
     }
     .wrapper{
         margin-top: 121px; 
+    }
+    .header-nav span:nth-child(2){
+        display: inline-block; 
+    }
+    .header-nav span:nth-child(1) {
+        margin-right: 0;
+        font-size: 100%;
+    }
+    .emergency-header{
+        font-size: 100%;
+    }
+    .main-display {
+        height: calc(100vh - 121px);
     }
 }
 @media only screen and (min-width: 769px){
@@ -216,5 +220,11 @@ li .left-alignement {
 @media only screen and (max-width: 769px){
     .sidebar-2 {
         display: none;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    .main-display{
+        height: calc(100vh - 121px);
     }
 }

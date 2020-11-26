@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import custom validator to validate that password and confirm password fields match
 import { StorageService } from 'src/app/_shared/services/storage.service';
 import { MustMatch } from 'src/app/_shared/services/must-match.validator';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -16,7 +17,8 @@ export class RegisterComponent implements OnInit {
   submitted = false;
 
   constructor(private formBuilder: FormBuilder, 
-              private storage: StorageService) { }
+              private storage: StorageService,
+              private location: Location) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -53,6 +55,7 @@ export class RegisterComponent implements OnInit {
   onReset() {
     this.submitted = false;
     this.registerForm.reset();
+    this.location.back();
   }
 
   addRegisterForms(){
@@ -60,3 +63,4 @@ export class RegisterComponent implements OnInit {
   }
 
 }
+

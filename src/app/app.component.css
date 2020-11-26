@@ -14,6 +14,7 @@ header {
     overflow: hidden;
     z-index: 9;
 }
+/*
 #main-header {
     display: flex;
     align-items: center;
@@ -21,7 +22,7 @@ header {
     padding: 0.8rem 0.8rem 0.4rem 0.8rem;
     max-width: var(--container-max-width);
     margin: 0 auto;
-    background: var(--first-blue-color-lighter);
+    background: var(--mainWhite);
 }
 .header-logo {
     display: flex;
@@ -55,7 +56,7 @@ header {
 .header-date {
     display: flex;
     align-items: center;
-    background-color: var(--mainWhite);
+    background-color: var(--first-blue-color-lighter);
     padding-right: 0.5rem;
     border-radius: 4px;
     margin-right: 0.6rem;
@@ -102,3 +103,4 @@ header {
         display: none;
     }
 }
+*/

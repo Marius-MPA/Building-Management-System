@@ -4,8 +4,8 @@
         
         <div class="day" *ngFor="let forecast of weather">
             <img [src]="forecast.iconLink" />
-            <p>{{ forecast.highTemperature }}C / {{ forecast.highTemperature | fahrenheit }}F</p>
-            <p>{{ forecast.utcTime | moment }}</p>
+            <p>{{ forecast.highTemperature }}C / {{ forecast.highTemperature | fahrenheit }}F <br>
+            {{ forecast.utcTime | moment }}</p>
         </div>
              
     </div>

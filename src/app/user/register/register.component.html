@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="inputContainer">
-                <label for="#firstName">
+                <label for="firstName">
                     <input id="firstName" type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid' : submitted && f.firstName.errors }" 
                         placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'">
                     <i class="fas fa-user labelIcon"></i>
@@ -32,8 +32,8 @@
                 </div>
             </div>
             <div class="inputContainer">
-                <label for="#lastName">
-                    <input id="lasttName" type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" 
+                <label for="lastName">
+                    <input id="lastName" type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" 
                         placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'"/>
                     <i class="fas fa-user labelIcon"></i>
                 </label>
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="inputContainer">
-                <label for="#email">
+                <label for="email">
                     <input id="email" type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" 
                         placeholder="E-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" />
                     <i class="fas fa-envelope labelIcon"></i>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="inputContainer">
-                <label for="#password">
+                <label for="password">
                     <input id="password"type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" 
                         placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" />
                     <i class="fas fa-lock labelIcon"></i>
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="inputContainer">
-                <label for="#confirmPassword">
+                <label for="confirmPassword">
                     <input id="confirmPassword" type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" 
                     placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'" />
                     <i class="fas fa-lock labelIcon"></i>

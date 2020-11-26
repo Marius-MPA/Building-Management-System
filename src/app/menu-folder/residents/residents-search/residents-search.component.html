@@ -1,0 +1,14 @@
+<div class="search-component">
+    <h4><label for="search-box">Resident Search</label></h4>
+    <!-- <input #searchBox ngModel id="search-box" /> -->
+    <input #searchBox id="search-box" (input)="search(searchBox.value)"/>
+    <br>
+    <h5>Search Result:</h5>
+    <ul class="search-result">
+        <li *ngFor="let resident of buildingResidents$ | async | filterArray: searchBox.value : 'name'">
+            <a routerLink="detail/{{resident.id}}">
+                {{resident.name}}
+            </a>
+        </li>
+    </ul>
+</div>

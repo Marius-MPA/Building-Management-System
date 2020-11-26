@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>{{title | uppercase }}</h2>
+    <div class="residents-buttons">
+        <button (click)="goBack()">Cancel</button>
+        <button class="btn-add-resident"><a routerLink="detail">Add New Resident</a></button>
+    </div>
+    <div class="resident-search">
+        <app-residents-search></app-residents-search> 
+    </div>
+    
+    <ul *ngIf="residentsList">
+        <li *ngFor="let resident of residentsList">
+                <span class="badge"><strong>AP: </strong>{{resident.apartment}}</span><br>
+                <!-- <br> -->
+                <div class="list-details">
+                    <strong>Name: </strong>{{ resident.name}}<br>
+                    <strong>No Of Persons: </strong>{{ resident.numberOfPersons}}<br>
+                    <strong>No Of Rooms: </strong>{{ resident.numberOfRooms}}<br>
+                </div>
+           
+            <div class="list-buttons">
+                <a routerLink="detail/{{resident.id}}"><button>Details</button></a>
+                <button class="delete" title="Delete {{resident.name}}"
+                (click)="delete(resident)">Delete</button>
+            </div>
+        </li>
+    </ul>
+     
+</div>
+
+

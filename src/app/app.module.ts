@@ -10,6 +10,7 @@ import { DashboardModule } from './dashboard-folder/dashboard.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './_shared/shared.module';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { MenuModule } from './menu-folder/menu.module';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,14 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    UserModule,
-    DashboardModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule,
     HttpClientModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    UserModule,
+    DashboardModule,
+    SharedModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

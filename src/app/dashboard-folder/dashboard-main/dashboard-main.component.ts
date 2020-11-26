@@ -10,7 +10,7 @@ export class DashboardMainComponent implements OnInit {
 
   public isMenuVisible = false;
 
-  constructor(private userService : UserService) { }
+  constructor(public userService : UserService) { }
 
   ngOnInit(): void {
   }
@@ -21,7 +21,7 @@ export class DashboardMainComponent implements OnInit {
 
   logout(){
     this.userService.logOut();
-    console.log('hello');
+    alert('Good Bye!! :-)\n\n')
   }
 
 }

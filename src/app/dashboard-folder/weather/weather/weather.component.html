@@ -2,8 +2,8 @@
     <p *ngIf="weather.length == 0">Searching...</p>
     <div class="weather-details" *ngIf="weather.length > 0">     
       <img [src]="currentWeather.iconLink" />
-      <p>{{ currentWeather.highTemperature }} C </p>
-      <p>{{ currentWeather.highTemperature | fahrenheit }} F </p>
+      <p>{{ currentWeather.highTemperature }} C <br>
+      {{ currentWeather.highTemperature | fahrenheit }} F </p>
           <!-- <p>{{ currentWeather.utcTime | moment }}</p> -->
     </div>
     <a routerLink="/dashboardMainComponent/Weather7Days">

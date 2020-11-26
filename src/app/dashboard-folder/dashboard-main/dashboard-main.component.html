@@ -11,7 +11,11 @@
         <div class="emergency-header">
           <span>24/7 Emergency: (613) 762-5704</span> 
         </div>
-        <div class="header-nav" (click)="logout()" routerLink="/loginComponent">
+        <div class="header-nav" routerLink="/loginComponent" *ngIf="!userService.isLoggedIn">
+          <span><i class="fas fa-user"></i></span>
+          <span><b>LogIn</b></span>
+        </div>
+        <div class="header-nav" (click)="logout()" routerLink="/dashboardMainComponent" *ngIf="userService.isLoggedIn">
             <span><i class="fas fa-sign-out-alt"></i></span>
             <span><b>LogOut</b></span>
         </div>
@@ -25,6 +29,10 @@
                 <i class="fas fa-columns left-alignement"></i>
                 <p>Dashboard</p>
             </li>
+            <li (click)="toggleMenu()" routerLink="/dashboardMainComponent/residents" class="sidebar-item">
+              <i class="fas fa-user left-alignement"></i>
+              <p>residents</p>
+            </li>
             <li (click)="toggleMenu()" routerLink="/dashboardMainComponent/invoices" class="sidebar-item">
                 <i class="fas fa-wrench left-alignement"></i>
                 <p>Invoices</p>
@@ -33,7 +41,6 @@
             <li class="sidebar-item"><i class="far fa-calendar-alt left-alignement"></i><p>calendar</p></li>
             <li class="sidebar-item"><i class="fas fa-list left-alignement"></i><p>maintenance schedule</p></li>
             <li class="sidebar-item"><i class="far fa-building left-alignement"></i><p>building</p></li>
-            <li class="sidebar-item"><i class="fas fa-user left-alignement"></i><p>residents</p></li>
             <li class="sidebar-item"><i class="fas fa-key left-alignement"></i><p>keys</p></li>
             <li class="sidebar-item"><i class="fas fa-cube left-alignement"></i><p>parcels</p></li>
             <li class="sidebar-item"><i class="fas fa-globe-europe left-alignement"></i><p>contractors</p></li>
@@ -64,6 +71,10 @@
               <i class="fas fa-columns left-alignement"></i>
               <p>Dashboard</p>
           </li>
+          <li (click)="toggleMenu()" routerLink="/dashboardMainComponent/residents" class="sidebar-item">
+            <i class="fas fa-user left-alignement"></i>
+            <p>residents</p>
+          </li>
           <li routerLink="/dashboardMainComponent/invoices" class="sidebar-item">
               <i class="fas fa-wrench left-alignement"></i>
               <p>Invoices-1</p>
@@ -72,7 +83,6 @@
           <li class="sidebar-item"><i class="far fa-calendar-alt left-alignement"></i><p>calendar</p></li>
           <li class="sidebar-item"><i class="fas fa-list left-alignement"></i><p>maintenance schedule</p></li>
           <li class="sidebar-item"><i class="far fa-building left-alignement"></i><p>building</p></li>
-          <li class="sidebar-item"><i class="fas fa-user left-alignement"></i><p>residents</p></li>
           <li class="sidebar-item"><i class="fas fa-key left-alignement"></i><p>keys</p></li>
           <li class="sidebar-item"><i class="fas fa-cube left-alignement"></i><p>parcels</p></li>
           <li class="sidebar-item"><i class="fas fa-globe-europe left-alignement"></i><p>contractors</p></li>

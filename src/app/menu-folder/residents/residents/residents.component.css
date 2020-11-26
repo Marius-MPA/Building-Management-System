@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--first-blue-color-lighter);
+    min-height: calc(100vh - 163px);
+    padding: 1rem;
+}
+.residents-buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+.residents-buttons button:first-child{
+    margin-right: 1rem;
+}
+.residents-buttons button:nth-child(2) a{
+    color: var(--mainWhite);
+}
+ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+ul li {
+    width: 75%;
+    text-decoration: none;
+    list-style-type: none;
+    border: 1px solid grey;
+    padding: 0.5em;
+    margin: 0.3em;
+    /* cursor: pointer; */
+    box-shadow:  0 3px 5px grey;
+    text-align: left;
+    background-color: var(--mainWhite);
+}
+
+ul li a{
+    color: black;
+}
+.btn-add-resident a:hover {
+    color: black!important;
+}
+ul li strong:nth-child(2){
+    margin-top: 1rem;
+    color: red;
+}
+.badge{
+    margin-left: calc(50% - 25px);
+    
+}
+.badge strong {
+    margin-bottom: 2rem!important;
+}
+ul li:hover {
+    background: var(--bluePurple-light);
+}
+ul li:active {
+    box-shadow: none;
+}
+.list-details{
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+button {
+    border: 2px solid black;
+    border-radius: 4px;
+    background: var(--first-blue-color);
+    font-weight: 600;
+    padding: 0.25rem;
+    color: var(--mainWhite);
+    cursor: pointer;
+}
+button:hover {
+    background: var(--first-greenyellow-color);
+    color: var(--mainBlack);
+}
+.delete{
+    background: rgb(243, 64, 64);
+}
+.delete:hover{
+    background: red;
+}
+.list-buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+.list-buttons button:first-child{
+    margin-right: 1rem;
+}
+@media only screen and (min-width: 426px){
+    ul li {
+        width: 40%;
+    }
+    .residents-buttons{
+        margin-top: 1rem;
+    }
+    .residents-buttons button:first-child{
+        margin-right: 2rem;
+    }
+    .container h2 {
+        font-size: 170%;
+    }
+    button {
+        padding: 0.5rem;
+    }
+    .list-details{
+        margin-top: 0.75rem;
+        margin-left: 2rem;
+    }
+    .list-buttons{
+        margin-top: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 769px){
+    ul li {
+        width: 30%;
+    }
+}

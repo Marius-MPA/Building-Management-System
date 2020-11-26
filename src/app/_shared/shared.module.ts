@@ -5,7 +5,10 @@ import { CurrentDateComponent } from './components/current-date/current-date.com
 import { FahrenheitPipe } from './pipes/fahrenheit/fahrenheit.pipe';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { MomentPipe } from './pipes/moment-timeConversion/moment.pipe';
-
+import { FilterArrayPipe } from './pipes/filter-array/filter-array.pipe';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { SharedRoutingModule } from './shared-routing.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,19 +16,25 @@ import { MomentPipe } from './pipes/moment-timeConversion/moment.pipe';
     ErrorComponent,
     CurrentDateComponent,
     FahrenheitPipe,
-    MomentPipe
+    MomentPipe,
+    FilterArrayPipe,
+    MainMenuComponent
   ],
   imports: [
     CommonModule,
-    // HttpClientModule,
-    // HttpClientJsonpModule
-
+    SharedRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    
   ],
   exports : [ 
     ErrorComponent,
     CurrentDateComponent,
     FahrenheitPipe,
-    MomentPipe
+    MomentPipe,
+    FilterArrayPipe,
+    MainMenuComponent
   ]
 })
 export class SharedModule { }
+

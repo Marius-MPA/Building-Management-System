@@ -7,7 +7,7 @@
     background-position: center; /* Center the image */
     background-repeat: no-repeat;  /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    min-height: 610px;   /* 'min-height' overrides the 'height' */
+    height: 89.2vh;
     margin: 0 auto;
 }
 .container:after {
@@ -22,7 +22,7 @@
 }
 .form-container {
     position: relative;
-    top: 2.5rem;
+    top: 1.5rem;
     background: url('../../../assets/images/register-form-bcg1.jpg');
     background-color: #c6dadf; /* Used if the image is unavailable */
     max-width: 350px;
@@ -187,30 +187,19 @@ input[type=password]:focus
     color: var(--first-blue-color-darker);
     box-shadow: 0 0 8px 0 var(--first-greenyellow-color);
 }
-
-
+@media only screen and (min-width: 426px){
+    .form-container {
+        top: 2.5rem;
+    }
+}
 @media only screen and (min-width: 1440px){
     .container{
-        height: 720px;
+        height: 92vh;
     }
     .form-container {
         top: 2.5rem;
     }
 }
-
-@media only screen and (max-width: 426px){
-    /* .container {
-        top: 98px;
-        min-height: 582px;
-    }
-    .form-container {
-        top: 0.5rem;
-        font-size: 90%;
-    } */
-}
-
-
-
 
 input.ng-touched.ng-invalid,
 select.ng-touched.ng-invalid {

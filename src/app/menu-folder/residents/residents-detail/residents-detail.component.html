@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="detail-container">
+        <h2>Apartment: {{residentDetail.apartment }}</h2>
+        <h3>Owner: {{residentDetail.name | uppercase }}</h3>
+        <div><span>Resident Unique ID: </span>{{residentDetail.id}}</div>
+        <div class="content">
+            <label>
+                <span>Apartment: </span>
+                <input [(ngModel)]="residentDetail.apartment" placeholder="Apartment"/>
+            </label><br>
+            <label>
+                <span>Building Name/No: </span>
+                <input [(ngModel)]="residentDetail.buildingName" placeholder="Building Name/No"/>
+            </label><br>
+            <label>
+                <span>Floor: </span>
+                <input [(ngModel)]="residentDetail.floor" placeholder="Floor"/>
+            </label> <br>
+            <label>
+                <span>No Of Rooms: </span>
+                <input [(ngModel)]="residentDetail.numberOfRooms" placeholder="Number Of Rooms"/>
+            </label>
+            <br>
+            <label>
+                <span>Undivided Share of Ownership: </span>
+                <input [(ngModel)]="residentDetail.undividedShare" placeholder="Undivided Share of Ownership:"/>
+            </label>
+            <br>
+            <label>
+                <span>Owner Name: </span>
+                <input [(ngModel)]="residentDetail.name" placeholder="Owner Name"/>
+            </label>
+            <br>
+            <label>
+                <span>Tenant Name: </span>
+                <input [(ngModel)]="residentDetail.tenantName" placeholder="Tenant Name"/>
+            </label>
+            <br>
+            <label>
+                <span>No Of Persons: </span>
+                <input [(ngModel)]="residentDetail.numberOfPersons" placeholder="Tenant Name"/>
+            </label>
+            <br>
+            <label>
+                <span>No Of Pets: </span>
+                <input [(ngModel)]="residentDetail.pets" placeholder="No Of Pets"/>
+            </label>
+            <br>
+        </div>
+        <div class="detail-buttons">
+            <button (click)="goBack()">Cancel</button>
+            <button (click)="save()">Save</button>
+            <button class="delete" title="Delete {{residentDetail.name}}"
+                (click)="delete()">Delete</button>
+        </div>
+    </div>
+</div>

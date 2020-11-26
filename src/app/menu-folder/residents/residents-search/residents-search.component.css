@@ -1,0 +1,22 @@
+.search-component{
+    text-align: center;
+  }
+  .search-component h5{
+    margin-bottom: 0.5rem!important;
+  }
+  .search-component ul {
+    display: inline-block;
+    margin: 0 0 00.5rem 0;
+    padding: 0;
+  }
+  
+  .search-component ul li {
+    padding: 2px 25px;
+    border: 1px solid black;
+    background: white;
+    list-style-type: none;
+  }
+  
+  ul li a {
+    color: black;
+  }
