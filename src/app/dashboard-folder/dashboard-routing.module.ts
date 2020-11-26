@@ -19,12 +19,6 @@ const routes: Routes = [
         component: DashboardComponent,
         pathMatch: 'full'
       },
-      // {
-      //   path: 'residents',
-      //   component: ResidentsComponent
-      // },
-      // { path: 'residents/detail/:id', component: ResidentsDetailComponent },
-      // { path: 'residents/detail', component: ResidentsDetailComponent },
       {
         path: 'invoices',
         component: InvoicesComponent
@@ -36,13 +30,10 @@ const routes: Routes = [
       {
         path: 'imp-num-list',
         component: ImpNumListComponent
-      },
+      }
     ] 
   },
-  // {  // daca fac 'path' separat, cand se incarca dispare pagina 'dashboard-main'; ramane doar 'app-component' si 'residences'
-  //   path: 'residents',
-  //   component: ResidentsComponent
-  // }
+  
 ];
 
 @NgModule({

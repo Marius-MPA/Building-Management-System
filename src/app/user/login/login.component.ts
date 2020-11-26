@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   }
   
   login(){
-    // console.log(this.userProfileForm.value); // la final console.log - trebuie sters sau facut 'comment'
+    // console.log(this.userProfileForm.value); 
     this.userService.logIn(this.userProfileForm.value);
     
   }

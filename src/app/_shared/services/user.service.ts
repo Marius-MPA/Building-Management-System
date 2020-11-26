@@ -21,7 +21,9 @@ export class UserService {
   public logIn(loginData) {
     this.isLoggedIn = false; 
     let user = this.storage.getUser(loginData.userEmail); 
+
     // console.log(user);
+
     if(user !== null && loginData.userPassword === user.password) 
     {
       this.isLoggedIn = true; 

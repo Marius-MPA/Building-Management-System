@@ -14,8 +14,14 @@ const routes: Routes = [
         component: ResidentsComponent,
         canActivate: [LogInGuard]
       },
-      { path: 'residents/detail/:id', component: ResidentsDetailComponent },
-      { path: 'residents/detail', component: ResidentsDetailComponent },
+      { 
+        path: 'residents/detail/:id',
+        component: ResidentsDetailComponent 
+      },
+      { 
+        path: 'residents/detail',
+        component: ResidentsDetailComponent
+      },
       
     ] 
   },
